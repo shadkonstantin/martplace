@@ -19,4 +19,5 @@ $(function () {
 
     });
 
+    var mixer = mixitup('.newest__inner');
 });
