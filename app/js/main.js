@@ -19,6 +19,15 @@ $(function () {
 
     });
 
+    $('.followers__inner').slick({
+        slidesToScroll: 1,
+        slidesToShow: 3,
+        arrows: true,
+        dots: false,
+        prevArrow: "<button class='slick-prev arrows icon-angle-left weekly-arrow__left'></button>",
+        nextArrow: "<button class='slick-next arrows icon-angle-right weekly-arrow__right'></button>"
+    })
+
     var mixer = mixitup('.newest__inner');
 
 });
