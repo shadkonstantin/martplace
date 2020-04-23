@@ -506,37 +506,41 @@
     }
 }
 
-.menu {
-    min-height: inherit;
+.wrapper-page {
+    .menu {
+        min-height: inherit;
 
-    &__list {
-        margin: 0;
-    }
-}
-
-.menu__list-item {
-    position: relative;
-    height: 80px;
-    line-height: 80px;
-
-    &:hover>a {
-        color: $blue;
-    }
-
-    &:hover {
-
-        .products__dropmenu,
-        .home__dropmenu,
-        .wordpress__dropmenu,
-        .pages__dropmenu {
-            height: auto;
-            overflow: visible;
-            padding: 20px;
-            border-top: 2px solid $blue;
-            opacity: 1;
+        &__list {
+            margin: 0;
         }
     }
+
+    .menu__list-item {
+        position: relative;
+        height: 80px;
+        line-height: 80px;
+
+        &:hover>a {
+            color: $blue;
+        }
+
+        &:hover {
+
+            .products__dropmenu,
+            .home__dropmenu,
+            .wordpress__dropmenu,
+            .pages__dropmenu {
+                height: auto;
+                overflow: visible;
+                padding: 20px;
+                border-top: 2px solid $blue;
+                opacity: 1;
+            }
+        }
+    }
+
 }
+
 
 
 .products__dropmenu,
