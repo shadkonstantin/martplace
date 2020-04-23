@@ -60,8 +60,8 @@ body {
     flex: 0 0 auto;
 }
 
-.rotate180{
-    &::before{
+.rotate180 {
+    &::before {
         transform: rotate(180deg);
         -webkit-transform: rotate(180deg);
         -moz-transform: rotate(180deg);
@@ -69,4 +69,19 @@ body {
         -o-transform: rotate(180deg);
     }
 
+}
+
+.dropmenu__title {
+
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: 1px solid #e8ebf0;
+
+    & .drop-menu__link {
+        font-size: 15px;
+        color: #0674ec;
+    }
 }
