@@ -51,7 +51,8 @@
 
                 .dropmenu-user__link {
                     color: white;
-                    &::after{
+
+                    &::after {
                         color: white;
                     }
                 }
@@ -92,14 +93,17 @@
         }
     }
 }
-.header__top-notification{
+
+.header__top-notification {
     display: flex;
     height: 100px;
     align-items: center;
 }
-.notification__link{
+
+.notification__link {
     position: relative;
-    span{
+
+    span {
         position: absolute;
         width: 22px;
         height: 22px;
@@ -115,52 +119,63 @@
     }
 }
 
-.notification__link-ring{
-    span{
+.notification__link-ring {
+    span {
         background-color: #ff6a6c;
     }
 }
-.notification__link-mail{
-    span{
+
+.notification__link-mail {
+    span {
         background-color: #62d03b;
     }
 }
-.notification__link-shop{
-    span{
+
+.notification__link-shop {
+    span {
         background-color: #0674ec;
     }
 }
 
-.box__item{
+.box__item {
     height: 100%;
     line-height: 100px;
-    +.box__item{
+
+    +.box__item {
         margin-left: 32px;
     }
 }
 
-.message-box{
+.message-box {
     position: relative;
-    
-    &:hover{
-        .message-menu{
+
+    &:hover {
+        .message-menu {
+            height: auto;
+            overflow: visible;
+            border-top: 1px solid $blue;
+
+        }
+    }
+}
+
+.ring-box {
+    position: relative;
+
+    &:hover {
+        .ring-menu {
             height: auto;
             overflow: visible;
             border-top: 1px solid $blue;
         }
     }
 }
-.ring-box{
-    position: relative;
-    &:hover{
-        .ring-menu{
-            height: auto;
-            overflow: visible;
-            border-top: 1px solid $blue;
-        }
-    }
-}
-.message-menu, .ring-menu{
+
+
+
+.message-menu,
+.ring-menu,
+.shop-menu {
     background-color: #fff;
     //border-top: 1px solid $blue;
     z-index: 2;
@@ -172,6 +187,7 @@
     height: 0;
     overflow: hidden;
     transition: all .4s;
+
     &::after {
         position: absolute;
         content: '';
@@ -183,35 +199,41 @@
         /* Добавляем треугольник */
 
     }
-    &__item{
+
+    &__item {
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 20px;
         border-bottom: 1px solid #e8ebf0;
     }
-    &__info{
+
+    &__info {
         max-width: 265px;
         width: 100%;
         display: flex;
         justify-content: space-between;
         flex-direction: column;
     }
-    &__box{
+
+    &__box {
         display: flex;
         justify-content: space-between;
         margin-bottom: 20px;
     }
-    &__name{
+
+    &__name {
         font-size: 16px;
         @include medium;
         color: #333333;
         position: relative;
     }
-    &__icon{
+
+    &__icon {
         position: relative;
         margin-right: auto;
-        &::before{
+
+        &::before {
             position: absolute;
             content: "\f003";
             font-family: 'icomoon';
@@ -222,17 +244,20 @@
             transform: translateY(-50%);
         }
     }
-    &__time{
+
+    &__time {
         font-size: 14px;
         color: #0674ec;
         @include regular;
     }
-    &__text{
+
+    &__text {
         font-size: 15px;
         color: #555555;
         @include regular;
     }
-    &__img{
+
+    &__img {
         width: 40px;
         height: 40px;
         border-radius: 50%;
@@ -243,44 +268,53 @@
     }
 }
 
-.ring-menu{
+.ring-menu {
     left: -40px;
-    &::after{
+
+    &::after {
         right: auto;
         left: 35px;
     }
-    &__item{
+
+    &__item {
         display: flex;
     }
-    &__info{
+
+    &__info {
         max-width: 220px;
         width: 100%;
     }
-    &__comment{
+
+    &__comment {
         font-size: 15px;
         @include regular;
         color: #747a86;
     }
-    &__name{
+
+    &__name {
         margin-bottom: 10px;
     }
-    &__category{
+
+    &__category {
         color: #0674ec;
         font-size: 15px;
         @include regular;
         margin-bottom: 10px;
     }
-    &__time{
+
+    &__time {
         font-size: 14px;
         color: #747a86;
         @include regular;
     }
-    &__btn{
+
+    &__btn {
         width: 32px;
         height: 32px;
         border-radius: 50%;
         position: relative;
-        &::before{
+
+        &::before {
             position: absolute;
             font-family: 'icomoon';
             font-size: 14px;
@@ -288,38 +322,186 @@
             left: 50%;
             transform: translate(-50%, -50%);
         }
-        &--like{
+
+        &--like {
             background-color: #e6f1fd;
             color: $blue;
-            &::before{
+
+            &::before {
                 content: "\f08a";
             }
         }
-        &--comment{
+
+        &--comment {
             background-color: #f1ecf9;
             color: #7b52c5;
-            &::before{
+
+            &::before {
                 content: "\f0e5";
             }
         }
-        &--shop{
+
+        &--shop {
             background-color: #fff0f0;
             color: #ff7375;
-            &::before{
+
+            &::before {
                 content: "\f07a";
             }
         }
-        &--star{
+
+        &--star {
             background-color: #effaeb;
             color: #75d652;
-            &::before{
+
+            &::before {
                 content: "\f006";
             }
         }
-        
+
     }
 }
 
+.shop-menu {
+    width: 410px;
+    box-shadow: 0px 5px 40px 0px rgba(82, 85, 90, 0.2);
+    //border-top: 1px solid $blue;
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    &__img {
+        width: 80px;
+        height: 70px;
+        background-image: url(../img/header/shop-menu__img.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 0;
+    }
+
+    &__info {
+        max-width: 190px;
+        width: 100%;
+        margin-left: 15px;
+    }
+
+    &__name {
+        @include medium;
+        font-size: 16px;
+        color: #000000;
+        margin-bottom: 5px;
+    }
+
+    &__category {
+        @include medium;
+        font-size: 16px;
+        color: #000000;
+        margin-bottom: 18px;
+    }
+
+    &__CMS {
+        font-size: 15px;
+        @include medium;
+        color: #7347c1;
+        padding-left: 23px;
+        position: relative;
+
+        & span {
+            position: absolute;
+            font-size: 18px;
+            color: $violet;
+            left: 0;
+            top: 0;
+        }
+    }
+
+    &__operations {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__trash {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background-color: #f1ecf9;
+        margin-bottom: 10px;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: "\f014";
+            font-family: 'icomoon';
+            font-size: 18px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            color: #88929e;
+        }
+    }
+
+    &__price {
+        @include medium;
+        font-size: 16px;
+        color: #0674ec;
+        background-color: #e6f1fd;
+        padding: 10px 15px;
+        border-radius: 30px;
+    }
+
+    &__footer {
+        padding: 20px 20px 30px;
+
+        &-title {
+            @include medium;
+            font-size: 18px;
+            text-align: right;
+
+            span {
+                margin-left: 20px;
+            }
+        }
+    }
+
+    &__buttons {
+        display: flex;
+    }
+
+    &__btn {
+        width: 50%;
+        padding: 20px 45px;
+        color: white;
+        font-size: 15px;
+        text-align: center;
+
+        &--violet {
+            background-color: $violet;
+        }
+
+        &--blue {
+            background-color: $blue;
+        }
+    }
+
+}
+
+.shop-box {
+    position: relative;
+
+    &:hover {
+        .shop-menu {
+            height: auto;
+            overflow: visible;
+            border-top: 1px solid $blue;
+        }
+    }
+}
 
 .news {
     background-color: #eff1f5;
