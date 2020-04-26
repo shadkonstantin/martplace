@@ -66,10 +66,25 @@ $(function () {
         $(".aside__list-filter").slideToggle();
         $(this).toggleClass('rotate180');
     });
-    
 
-    var mixer = mixitup('.newest__inner');
+    $(".header__top-button").on("click", function () {
+        $(".header__top-box").toggleClass('header__top-box--active');
+    });
 
+    $(".menu__burger").on("click", function () {
+        $(".menu__list").slideToggle();
+    });
+    $(".header__top-info").on("click", function () {
+        $(".header__dropmenu-user").toggleClass('header__dropmenu-user--active');
+    });
+    $(".shop-box").on("click", function () {
+        $(".shop-menu").toggleClass('shop-menu--active');
+    });
 
+    $(window).on("load", function () {
+        if ($('.newest__inner').length) {
+            var mixer = mixitup('.newest__inner');
+        }
+    });
 
 });

@@ -52,10 +52,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-trash-o:before {
-  content: "\f014";
-}
-
 .icon-document-file-psd:before {
   content: "\e900";
 }
@@ -86,6 +82,10 @@
 
 .icon-th-list:before {
   content: "\f00b";
+}
+
+.icon-trash-o:before {
+  content: "\f014";
 }
 
 .icon-map-marker:before {
@@ -158,4 +158,8 @@
 
 .icon-google:before {
   content: "\f1a0";
+}
+
+.icon-user:before {
+  content: "\f007";
 }
