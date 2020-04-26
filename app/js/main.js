@@ -81,6 +81,16 @@ $(function () {
         $(".shop-menu").toggleClass('shop-menu--active');
     });
 
+    $('.single-product__info .tab').on('click', function (event) {
+        var id = $(this).attr('data-id');
+        $('.single-product__info').find('.tab-item').removeClass('active-tab').hide();
+        $('.single-product__info .tabs').find('.tab').removeClass('active');
+        $(this).addClass('active');
+        $('#' + id).addClass('active-tab').fadeIn();
+        return false;
+    });
+
+
     $(window).on("load", function () {
         if ($('.newest__inner').length) {
             var mixer = mixitup('.newest__inner');

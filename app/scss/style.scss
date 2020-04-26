@@ -1143,6 +1143,19 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 // CATEGORY PAGE START
 
 .search-page {
@@ -1744,8 +1757,167 @@
     }
 }
 
-
 // CATEGORY PAGE END
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// SINGLE PAGE START
+
+.bang-page {
+    width: 100%;
+    height: 180px;
+    background-image: url(../img/header/bang-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 50px 0px;
+
+    .breadcrumbs {
+        text-align-last: left;
+        margin-bottom: 20px;
+    }
+
+    &__title {
+        font-size: 30px;
+        @include medium;
+        color: white;
+    }
+}
+
+.single-product {
+    padding-top: 70px;
+    background-color: #eff1f5;
+
+    &__inner {
+        display: flex;
+    }
+
+    &__content {
+        max-width: 750px;
+        width: 100%;
+        margin-right: 30px;
+    }
+
+    &__item {
+        background-color: #fff;
+        padding-bottom: 40px;
+        box-shadow: 0px 2px 4px 0px rgba(108, 111, 115, 0.1);
+        border-radius: 4px;
+        margin-bottom: 30px;
+    }
+
+    &__img {
+        width: 100%;
+        height: 430px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        margin-bottom: 30px;
+    }
+
+    &__links {
+        text-align: center;
+        margin-bottom: 30px;
+        padding: 0px 30px 30px;
+        border-bottom: 1px solid #e8e8e8;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    &__footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .link-share {
+            padding: 20px;
+            max-width: 190px;
+            width: 100%;
+            color: #000000;
+            background-color: rgb(255, 255, 255);
+            box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            border-radius: 30px;
+            margin-right: 30px;
+        }
+    }
+
+}
+
+.product__link {
+    padding: 20px 20px;
+    color: $violet;
+    @include medium;
+    font-size: 15px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.1);
+    max-width: 190px;
+    width: 100%;
+    border-radius: 30px;
+    transition: all .4s;
+
+    +.product__link {
+        margin-left: 30px;
+    }
+
+
+    &:hover {
+        background-color: $blue;
+        color: white;
+    }
+
+}
+
+.single-product__info {
+
+
+    .tabs {
+
+        .tab {
+            padding: 20px 25px;
+            background-color: #fff;
+
+            &_content {
+                margin-top: -50px;
+                background-color: #fff;
+            }
+        }
+    }
+
+    .tab__title {
+        font-size: 28px;
+        margin-top: 70px;
+        margin-bottom: 30px;
+        color: #000000;
+    }
+
+    .tab__text {
+        max-width: 685px;
+        font-size: 16px;
+        line-height: 30px;
+        color: #555555;
+    }
+}
+
+
+// SINGLE PAGE END
 
 
 
