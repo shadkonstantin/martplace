@@ -91,6 +91,22 @@ $(function () {
     });
 
 
+
+    $('input[name="license"]').click(function(){
+        var target = $('#text__' + $(this).val());
+     
+        $('.license__text').not(target).hide(0);
+        target.fadeIn(500);
+    });
+
+    $(".rating__item-star").rateYo({
+        starWidth: "14px",
+        rating: 4.5,
+        numStars: 5,
+        readOnly: true
+    });
+
+
     $(window).on("load", function () {
         if ($('.newest__inner').length) {
             var mixer = mixitup('.newest__inner');

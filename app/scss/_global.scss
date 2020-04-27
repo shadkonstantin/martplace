@@ -93,3 +93,9 @@ body {
         color: #0674ec;
     }
 }
+
+@mixin box {
+    border-radius: 4px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 2px 4px 0px rgba(108, 111, 115, 0.1);
+}
